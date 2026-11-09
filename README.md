@@ -17,7 +17,9 @@
 
 ## 技术栈
 
-Django 5.2 LTS · Django REST Framework · Celery · Redis · PostgreSQL · HTMX · Tailwind CSS · Docker
+FastAPI · SQLAlchemy 2.1（asyncio）· PostgreSQL · Redis · Alembic · Vue 3 + TypeScript · Docker
+
+检测引擎是独立的 asyncio worker，多个实例通过 PostgreSQL `FOR UPDATE SKIP LOCKED` 并发领取任务；通知通过事务性 outbox 表投递，保证不丢不重。
 
 ## 文档
 
